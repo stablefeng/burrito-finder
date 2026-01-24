@@ -1,6 +1,30 @@
 @import "../styles/variables.scss";
 
-.right {
+.rightHeader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  @media (max-width: $breakpoint) {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+  }
+}
+
+.leftHeader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 150px;
+  @media (max-width: $breakpoint) {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+  }
+}
+
+.rightHome {
   position: absolute;
   top: 24px;
   right: 40px;
@@ -10,7 +34,7 @@
   }
 }
 
-.left {
+.leftHome {
   position: absolute;
   top: 24px;
   right: 150px;

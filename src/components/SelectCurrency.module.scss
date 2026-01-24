@@ -14,15 +14,17 @@
   background: transparent;
   appearance: none;
   text-transform: capitalize;
+  line-height: 34px;
   option {
-    color: $brand;
-    background: #fff;
+    color: #0c1411;
+    background: #eaf5eb;
     text-transform: capitalize;
   }
   @media (max-width: $breakpoint) {
     width: 80px;
     height: 28px !important;
     font-size: 11px !important;
+    line-height: 26px;
   }
 }
 

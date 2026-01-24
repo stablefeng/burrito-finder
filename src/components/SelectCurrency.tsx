@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { useDenoms } from "../queries/oracle";
 import { getCookie } from "../scripts/cookie";
-import { DEFAULT_CURRENCY, getDefaultCurrency } from "../scripts/utility";
+import { DEFAULT_CURRENCY } from "../scripts/utility";
 import { Currency } from "../store/CurrencyStore";
 import s from "./SelectCurrency.module.scss";
 
@@ -17,10 +17,9 @@ const SelectCurrency = (props: Props) => {
 
   useEffect(() => {
     if (!getCookie("currency") && navigator.cookieEnabled) {
-      const currency = getDefaultCurrency(denoms ?? []);
-      setCurrency(currency);
+      setCurrency(DEFAULT_CURRENCY);
     }
-  }, [setCurrency, denoms]);
+  }, [setCurrency]);
 
   return (
     <div className={props.className}>

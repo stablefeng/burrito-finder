@@ -22,7 +22,7 @@
     line-height: normal;
     letter-spacing: -0.8px;
     text-align: center;
-    color: $app-bg;
+    color: $app-fg;
   }
 
   p {
@@ -34,21 +34,21 @@
     letter-spacing: -0.2px;
     text-align: center;
     padding: 0;
-    color: $link;
+    color: rgba(234, 245, 235, 0.78);
     max-width: 540px;
     margin: 0 auto;
     word-break: break-word;
   }
 
   p span {
-    color: #5493f7;
+    color: $brand;
   }
 
   img {
     display: block;
     margin: 60px auto 70px;
-    width: 480px;
-    height: 172px;
+    width: 160px;
+    height: 160px;
   }
 
   a {
@@ -60,7 +60,7 @@
     text-align: center;
     border-radius: 25px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    background-color: #5493f7;
+    background-color: $brand;
     font-size: 17px;
     color: #ffffff;
     text-decoration: none;
@@ -79,8 +79,8 @@
 
     img {
       margin: 35px auto 50px;
-      width: 225px;
-      height: 81px;
+      width: 120px;
+      height: 120px;
     }
 
     a {

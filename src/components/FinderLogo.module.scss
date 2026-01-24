@@ -1,0 +1,51 @@
+@import "../styles/variables.scss";
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  color: $app-fg;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+.icon {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+}
+
+.burrito {
+  font-weight: 650;
+}
+
+.finder {
+  font-weight: 400;
+}
+
+.hero .icon {
+  height: 34px;
+}
+
+.hero .text {
+  font-size: 28px;
+}
+
+@media (max-width: $breakpoint) {
+  .hero .icon {
+    height: 24px;
+  }
+
+  .hero .text {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../styles/variables.scss";
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+  color: $app-fg;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+.icon {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+.text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: $breakpoint) {
+  .icon {
+    height: 18px;
+  }
+
+  .text {
+    font-size: 15px;
+    gap: 6px;
+  }
+}

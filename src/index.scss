@@ -26,14 +26,14 @@ code {
   display: inline-block;
   border-radius: 13px;
   height: 26px;
-  background-color: rgba(40, 69, 174, 0.1);
+  background-color: rgba($brand, 0.18);
   font-size: 12px;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   line-height: 26px;
   letter-spacing: -0.3px;
-  color: #2845ae;
+  color: $brand;
   padding: 0 15px;
   vertical-align: middle;
 }

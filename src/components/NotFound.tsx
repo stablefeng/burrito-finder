@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 import s from "./NotFound.module.scss";
-import earth from "../images/earth.svg";
 
 type Props = {
   keyword?: string;
@@ -33,7 +32,7 @@ const NotFound = ({ keyword }: Props) => {
           </>
         )}
 
-        <img src={earth} alt="earth" />
+        <img src="/brand/icon.png" alt="burrito" />
         <Link to="/">
           <span>Back to Home</span>
         </Link>
