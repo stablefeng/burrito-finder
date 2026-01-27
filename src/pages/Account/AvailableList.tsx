@@ -54,12 +54,13 @@ const AvailableList = ({
     ["coingecko-ustc"],
     async () => {
       const { data: result } = await axios.get<{
+        terrausd?: { usd?: number };
         terraclassicusd?: { usd?: number };
       }>(
-        "https://api.coingecko.com/api/v3/simple/price?ids=terraclassicusd&vs_currencies=usd"
+        "https://api.coingecko.com/api/v3/simple/price?ids=terrausd,terraclassicusd&vs_currencies=usd"
       );
 
-      return result?.terraclassicusd?.usd;
+      return result?.terrausd?.usd ?? result?.terraclassicusd?.usd;
     },
     {
       staleTime: PRICE_TTL,
