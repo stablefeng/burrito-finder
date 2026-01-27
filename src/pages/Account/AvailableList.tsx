@@ -54,14 +54,25 @@ const AvailableList = ({
   const { data: ustcPrice } = useQuery(
     ["coingecko-ustc"],
     async () => {
-      const { data: result } = await axios.get<{
-        terrausd?: { usd?: number };
-        terraclassicusd?: { usd?: number };
-      }>(
-        "https://api.coingecko.com/api/v3/simple/price?ids=terrausd,terraclassicusd&vs_currencies=usd"
-      );
+      try {
+        const { data: result } = await axios.get<{
+          terrausd?: { usd?: number };
+          terraclassicusd?: { usd?: number };
+        }>(
+          "https://api.coingecko.com/api/v3/simple/price?ids=terrausd,terraclassicusd&vs_currencies=usd"
+        );
 
-      return result?.terrausd?.usd ?? result?.terraclassicusd?.usd;
+        const price = result?.terrausd?.usd ?? result?.terraclassicusd?.usd;
+        if (price) return price;
+      } catch {
+        // fall through to alternative source
+      }
+
+      const { data: paprika } = await axios.get<{
+        quotes?: { USD?: { price?: number } };
+      }>("https://api.coinpaprika.com/v1/tickers/ust-terrausd");
+
+      return paprika?.quotes?.USD?.price;
     },
     {
       staleTime: PRICE_TTL,
