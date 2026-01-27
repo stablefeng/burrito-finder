@@ -53,7 +53,7 @@ const TokenBalance = ({ address }: { address: string }) => {
               onChange={() => setHideLowValueAssets(!hideLowValueAssets)}
             />
             <span className={s.toggleTrack} />
-            <span className={s.toggleLabel}>Hide Low-value Assets</span>
+            <span className={s.toggleLabel}>Hide low-balance</span>
           </label>
         }
       >
@@ -89,7 +89,7 @@ const TokenBalance = ({ address }: { address: string }) => {
                 onChange={() => setHideLowValueTokens(!hideLowValueTokens)}
               />
               <span className={s.toggleTrack} />
-              <span className={s.toggleLabel}>Hide Low-value Assets</span>
+              <span className={s.toggleLabel}>Hide low-balance</span>
             </label>
           }
         >

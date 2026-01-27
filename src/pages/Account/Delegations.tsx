@@ -96,7 +96,7 @@ const Delegations = ({ address }: { address: string }) => {
             onChange={() => setHideLowValueRewards(!hideLowValueRewards)}
           />
           <span className={s.toggleTrack} />
-          <span className={s.toggleLabel}>Hide Low-value Assets</span>
+          <span className={s.toggleLabel}>Hide low-balance</span>
         </label>
       }
     >
