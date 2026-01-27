@@ -178,7 +178,7 @@ const AvailableList = ({
     async () => {
       const { data: result } = await axios.get<{
         rates?: Record<string, number>;
-      }>("https://api.frankfurter.app/latest?from=USD&to=MNT,TWD");
+      }>("https://open.er-api.com/v6/latest/USD");
       return result?.rates;
     },
     {
